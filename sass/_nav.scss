@@ -1,1 +1,170 @@
 @use "base" as b;
+
+.header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 691px;
+
+  &__content {
+    margin-top: 4.4rem;
+    text-align: center;
+  }
+
+  &__heading {
+    color: b.$White;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    padding-bottom: 4rem;
+  }
+
+  &__arrow {
+    width: 50px;
+    margin: auto;
+  }
+}
+
+.nav {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  width: 88%;
+  margin: 0 auto;
+
+  &__logo {
+    width: 175px;
+  }
+
+  &__link {
+    position: fixed;
+    top: 140%;
+    right: 0;
+    transform: rotate(-90deg);
+    width: 425px;
+    background-color: b.$White;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+    transition: all 0.5s ease-in-out;
+    transform-origin: 100% -10%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: -19px;
+
+      width: 0;
+      height: 0;
+      rotate: -45deg;
+
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-top: 30px solid b.$White;
+    }
+  }
+
+  &__links {
+    &:not(.btn) {
+      font-size: 1.4rem;
+      color: b.$Dark-grayish-blue;
+    }
+  }
+
+  &.menu-reveal &__link {
+    position: absolute;
+    transform: rotate(0deg);
+  }
+}
+
+.burger__menu {
+  height: 30px;
+  width: 35px;
+  transition: all 0.5s;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#burger__check {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+
+  height: 35px;
+  width: 35px;
+  opacity: 0%;
+  z-index: 2;
+
+  &:checked + .burger__menu {
+    rotate: 90deg;
+  }
+}
+
+@media (min-width: b.$Desktop) {
+  .header {
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+
+    &__content {
+      margin-top: 4rem;
+    }
+
+    &__arrow {
+      width: 35px;
+    }
+  }
+
+  .nav {
+    width: 95%;
+
+    &__link {
+      position: unset;
+      width: auto;
+      rotate: 0deg;
+
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      padding: 0;
+      background-color: transparent;
+
+      &::before {
+        content: "";
+        display: none;
+      }
+    }
+
+    &__links {
+      &:not(.btn) {
+        font-size: 1.1rem;
+        color: b.$White;
+      }
+    }
+  }
+
+  .burger__menu {
+    display: none;
+  }
+
+  #burger__check {
+    display: none;
+  }
+}

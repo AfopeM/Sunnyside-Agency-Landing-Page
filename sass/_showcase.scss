@@ -1,1 +1,162 @@
 @use "base" as b;
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 500px) repeat(2, 725px);
+
+  //SHOWCASE MAIN CONTENT
+  &__content-img {
+    background-position: center;
+    background-size: cover;
+    &--stand-out {
+      background-image: url("../images/mobile/image-stand-out.jpg");
+    }
+    &--transform {
+      background-image: url("../images/mobile/image-transform.jpg");
+    }
+  }
+
+  &__content {
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  &__heading {
+    font-size: 2.3rem;
+    font-weight: 900;
+  }
+
+  &__text {
+    padding: 1.5rem 0;
+    line-height: 1.7;
+    color: b.$Dark-grayish-blue;
+  }
+
+  // SHOWCASE SUB-CONTENT
+  &__sub-content-img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+
+    &--graphic {
+      background-image: url("../images/mobile/image-graphic-design.jpg");
+      background-size: cover;
+    }
+
+    &--photography {
+      background-image: url("../images/mobile/image-photography.jpg");
+      background-size: cover;
+    }
+  }
+
+  &__sub-content {
+    position: absolute;
+    left: 50%;
+    translate: (-50% 0);
+    bottom: 10%;
+    width: 88%;
+    text-align: center;
+  }
+
+  &__sub-heading {
+    font-size: 1.9rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__sub-text {
+    line-height: 1.7rem;
+  }
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: black;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -7.5%;
+    bottom: -2px;
+    z-index: -1;
+
+    width: 115%;
+    height: 10px;
+    border-radius: 20px;
+    opacity: 0.2;
+    background-color: b.$Yellow;
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &--pink::after {
+    background-color: b.$Soft-red;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: b.$Desktop) {
+  .showcase {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 600px);
+
+    //SHOWCASE MAIN CONTENT
+    & > *:nth-child(2) {
+      grid-row: 1;
+    }
+
+    &__content-img {
+      background-position: center;
+      background-size: cover;
+      &--stand-out {
+        background-image: url("../images/desktop/image-stand-out.jpg");
+      }
+      &--transform {
+        background-image: url("../images/desktop/image-transform.jpg");
+      }
+    }
+
+    &__content {
+      width: 78%;
+      justify-self: center;
+      align-self: center;
+      text-align: start;
+      padding: 4rem 3rem;
+    }
+
+    // SHOWCASE SUB-CONTENT
+    &__sub-content-img {
+      &--graphic {
+        background-image: url("../images/desktop/image-graphic-design.jpg");
+      }
+
+      &--photography {
+        background-image: url("../images/desktop/image-photography.jpg");
+      }
+    }
+
+    &__sub-content {
+      width: 55%;
+    }
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

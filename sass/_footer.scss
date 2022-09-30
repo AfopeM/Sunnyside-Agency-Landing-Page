@@ -1,1 +1,34 @@
 @use "base" as b;
+
+.footer {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: b.$Light-moderate-cyan;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  &__logo {
+    width: 160px;
+    color: b.$Dark-moderate-cyan;
+  }
+
+  &__nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      color: b.$Dark-moderate-cyan;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}

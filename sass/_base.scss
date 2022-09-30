@@ -1,13 +1,13 @@
 // LAYOUT
-$Tablet: 750px;
-$Desktop: 1080px;
+$Desktop: 800px;
 
 // COLOURS
 $Soft-red: hsl(7, 99%, 70%);
 $Yellow: hsl(51, 100%, 49%);
 $Dark-desaturated-cyan: hsl(167, 40%, 24%); // graphic design text
 $Dark-blue: hsl(198, 62%, 26%); // photography text
-$Dark-moderate-cyan: hsl(168, 34%, 41%); // footer
+$Dark-moderate-cyan: hsl(168, 34%, 41%); // footer text
+$Light-moderate-cyan: hsl(165, 44%, 61%); // footer bg
 
 $Very-dark-desaturated-blue: hsl(212, 27%, 19%);
 $Very-dark-grayish-blue: hsl(213, 9%, 39%);
@@ -31,6 +31,7 @@ html {
 }
 
 body {
+  // background-color: black;
 }
 
 h1,
@@ -40,7 +41,8 @@ h3 {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 a {
@@ -49,4 +51,39 @@ a {
 
 ul {
   list-style: none;
+}
+
+.btn {
+  color: black;
+  background-color: $Yellow;
+
+  padding: 1.1rem 2rem;
+  border-radius: 40px;
+
+  font-size: 1.2rem;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.btn:hover {
+  color: hsla(0, 0%, 0%, 0.4);
+  background-color: hsla(51, 100%, 49%, 0.4);
+}
+
+@media (min-width: $Desktop) {
+  .btn {
+    color: $Very-dark-desaturated-blue;
+    background-color: $White;
+
+    padding: 0.9rem 1.5rem;
+    border-radius: 28px;
+
+    font-size: 0.9rem;
+  }
+
+  .btn:hover {
+    color: $White;
+    background-color: hsla(197, 100%, 85%, 0.4);
+  }
 }

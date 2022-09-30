@@ -1,1 +1,104 @@
 @use "base" as b;
+
+.testimonial {
+  text-align: center;
+  width: 80%;
+  margin: 4rem auto;
+
+  &__heading {
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: b.$Dark-grayish-blue;
+
+    margin-bottom: 4rem;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 65px;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+
+.client {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__card-text {
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: b.$Very-dark-grayish-blue;
+  }
+
+  &__card-name {
+    display: block;
+    font-weight: 900;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: b.$Very-dark-desaturated-blue;
+  }
+
+  &__highlight {
+    display: block;
+    font-size: 0.8rem;
+    font-family: "Barlow", sans-serif;
+    color: b.$Dark-grayish-blue;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media (min-width: b.$Desktop) {
+  .testimonial {
+    width: 85%;
+    margin: 8rem auto;
+
+    &__heading {
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      color: b.$Dark-grayish-blue;
+
+      margin-bottom: 3rem;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 65px;
+      margin: 0 auto 1.5rem auto;
+    }
+  }
+  .client {
+    &__container {
+      align-items: center;
+    }
+
+    &__card-text {
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: b.$Very-dark-grayish-blue;
+    }
+
+    &__card-name {
+      display: block;
+      font-weight: 900;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: b.$Very-dark-desaturated-blue;
+    }
+
+    &__highlight {
+      display: block;
+      font-size: 0.8rem;
+      font-family: "Barlow", sans-serif;
+      color: b.$Dark-grayish-blue;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-solution-LmCorU6F1X)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-solution-DfVOwFKl3k)
 - Live Site URL: [Live Site](https://afopem.github.io/Sunnyside-Agency-Landing-Page/)
 
 ## My process

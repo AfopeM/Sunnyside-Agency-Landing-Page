@@ -36,18 +36,20 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Mobile-first workflow
+- Sass
 - Vanilla Javascript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- ResizeObserver
+- MutationObserver
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [ResizeObserver - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) - Helped me with responsive issues I couldn't not solve with media query.
+
+- [MutationObserver - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) - Didn't use it but still useful to know. Would probably use it later.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@AfopeM](https://www.frontendmentor.io/profile/AfopeM)

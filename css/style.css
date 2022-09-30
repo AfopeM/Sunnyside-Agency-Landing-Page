@@ -93,7 +93,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 691px;
+  height: 700px;
 }
 .header__content {
   margin-top: 4.4rem;
@@ -117,7 +117,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 125px;
   width: 88%;
   margin: 0 auto;
 }
@@ -126,8 +126,8 @@ ul {
 }
 .nav__link {
   position: fixed;
-  top: 140%;
-  right: 0;
+  top: 20%;
+  right: -20px;
   transform: rotate(-90deg);
   width: 425px;
   background-color: hsl(0deg, 0%, 100%);
@@ -137,8 +137,8 @@ ul {
   gap: 3rem;
   padding-top: 3rem;
   padding-bottom: 4rem;
-  transition: all 0.5s ease-in-out;
-  transform-origin: 100% -10%;
+  transition: all 0.5s ease;
+  transform-origin: 100% -30px;
 }
 .nav__link::before {
   content: "";
@@ -157,7 +157,7 @@ ul {
   color: hsl(232deg, 10%, 55%);
 }
 .nav.menu-reveal .nav__link {
-  position: absolute;
+  right: 6%;
   transform: rotate(0deg);
 }
 
@@ -190,10 +190,13 @@ ul {
     background-image: url("../images/desktop/image-header.jpg");
     background-size: cover;
     background-position: center;
-    height: 700px;
+    height: 745px;
   }
   .header__content {
-    margin-top: 4rem;
+    margin-top: 4.5rem;
+  }
+  .header__heading {
+    font-size: 3rem;
   }
   .header__arrow {
     width: 35px;
@@ -204,7 +207,7 @@ ul {
   .nav__link {
     position: unset;
     width: auto;
-    rotate: 0deg;
+    transform: rotate(0deg);
     flex-direction: row;
     align-items: center;
     gap: 2rem;
@@ -406,7 +409,7 @@ ul {
 @media (min-width: 800px) {
   .testimonial {
     width: 85%;
-    margin: 8rem auto;
+    margin: 9.5rem auto;
   }
   .testimonial__heading {
     font-size: 1rem;

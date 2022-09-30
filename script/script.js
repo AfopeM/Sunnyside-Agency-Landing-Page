@@ -34,6 +34,10 @@ function scrolling(e) {
   }
 }
 
+window.addEventListener("scroll", function (e) {
+  hideMobileMenu();
+});
+
 const windowWidthResize = new ResizeObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.contentRect.width >= 782) {
